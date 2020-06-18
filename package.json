@@ -1,0 +1,47 @@
+{
+  "name": "app-name",
+  "version": "0.0.0",
+  "description": "App Description",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "nodemon",
+    "build": "tsc",
+    "test": "jest src/",
+    "test:prod": "cross-env NODE_ENV=production jest --config=jest.config.prod.js dist/",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "deploy:linux": "node deploy/linux/install.ts",
+    "deploy:windows": "node deploy/windows/install.ts"
+  },
+  "author": "Loïc Viennois",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0",
+    "shelljs": "^0.8.4",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/helmet": "0.0.46",
+    "@types/jest": "^25.2.1",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.13.4",
+    "@types/shelljs": "^0.8.7",
+    "@types/supertest": "^2.0.9",
+    "cross-env": "^7.0.2",
+    "jest": "^25.5.4",
+    "nodemon": "^2.0.3",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.4.0",
+    "tslint": "^6.1.2"
+  },
+  "optionalDependencies": {
+    "node-windows": "^1.0.0-beta.1",
+    "node-linux": "^0.1.12",
+    "@types/node-windows": "^0.1.0",
+    "@types/node-linux": "^0.1.0"
+  }
+}
