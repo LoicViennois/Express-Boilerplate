@@ -8,7 +8,8 @@
     "build": "tsc",
     "test": "jest src/",
     "test:prod": "cross-env NODE_ENV=production jest --config=jest.config.prod.js dist/",
-    "lint": "tslint -p tsconfig.json -c tslint.json"
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "release": "standard-version"
   },
   "author": "Loïc Viennois",
   "license": "MIT",
@@ -27,6 +28,7 @@
     "cross-env": "^7.0.2",
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
+    "standard-version": "^9.0.0",
     "supertest": "^4.0.2",
     "ts-jest": "^26.3.0",
     "ts-node": "^9.0.0",
