@@ -1,10 +1,10 @@
 import * as express from 'express';
 import * as cors from 'cors';
-import { Request, Response } from 'express';
 import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 
 import { healthCheck } from './server/routes/healthz';
+import { hello } from './server/routes/hello';
 
 export const app = express();
 
@@ -17,9 +17,7 @@ app.use(cors({
 app.use(helmet());
 app.use(morgan('tiny'));
 
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).send('hello world');
-});
+app.route('/hello').get(hello);
 
 // Docker HEALTHCHECK
 app.route('/healthz').get(healthCheck);
