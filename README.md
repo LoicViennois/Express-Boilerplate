@@ -1,6 +1,6 @@
-# Express Boilerplate
+# Express with TypeScript Boilerplate
 
-This is a TypeScript/Express boilerplate built on:
+This is an Express/TypeScript boilerplate built on:
 - TypeScript 4
 - NodeJS 12
 - Express 4
