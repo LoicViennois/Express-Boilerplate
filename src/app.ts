@@ -3,7 +3,6 @@ import * as cors from 'cors';
 import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 
-import { healthCheck } from './server/routes/healthz';
 import { hello } from './server/routes/hello';
 
 export const app = express();
@@ -18,6 +17,3 @@ app.use(helmet());
 app.use(morgan('tiny'));
 
 app.route('/hello').get(hello);
-
-// Docker HEALTHCHECK
-app.route('/healthz').get(healthCheck);
