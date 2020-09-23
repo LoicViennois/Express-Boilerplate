@@ -14,6 +14,8 @@ FROM base as dev
 
 EXPOSE 3000
 
+ENV APP_CLIENT_URL="http://localhost:8080"
+
 ENV NODE_ENV="development"
 
 ENV EXPRESS_INTERFACE="0.0.0.0"
@@ -31,6 +33,8 @@ RUN npm run lint && \
 FROM node:lts-alpine as prod
 
 EXPOSE 3000
+
+ENV APP_CLIENT_URL="http://localhost:8080"
 
 ENV NODE_ENV="production"
 

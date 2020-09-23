@@ -5,5 +5,6 @@ This is and Express boilerplate including:
 - Build for production with tsc
 - Tests with Jest
 - Config for tslint
-- Deployment as services for both Windows and Linux
+- Changelog generation with standard-version
+- Deployment with Docker
 
