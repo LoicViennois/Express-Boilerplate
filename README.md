@@ -11,5 +11,4 @@ This boilerplate includes:
 - Tests with Jest
 - Config for tslint
 - Changelog generation with standard-version
-- Deployment with Docker
-
+- Deployment with Docker (version without Docker => [here](https://github.com/LoicViennois/Express-Boilerplate/tree/no-docker))
